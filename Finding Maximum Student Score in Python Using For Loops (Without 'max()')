@@ -1,0 +1,19 @@
+# Ask the user to input scores
+scores_input = input("Please type in the scores (comma-separated): ")
+
+# Split the input into a list of scores
+scores_list = [int(score) for score in scores_input.split(",")]
+
+# Initialize a variable to track the highest score
+highest_score = None
+
+# Iterate through the list to find the highest score
+for score in scores_list:
+    if highest_score is None or score > highest_score:
+        highest_score = score
+
+# Display the highest score
+if highest_score is not None:
+    print("The highest score is:", highest_score)
+else:
+    print("No scores provided.")
